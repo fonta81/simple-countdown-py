@@ -1,5 +1,4 @@
 import time
-# nesesito un  programa q pase los segundos a minuntos  -> y haga cuenta atras
 
 
 class TimeClass:
