@@ -25,6 +25,7 @@ class TimeClass:
 def main():
     tt = TimeClass()
     while True:
+        print("\n" + "=" * 60)
         print("1.Iniciar")
         print("2.Salir")
         elige = input("Elige: ")
@@ -38,3 +39,7 @@ def main():
 
         else:
             print("Ingrese un valor valido")
+
+
+if __name__ == "__main__":
+    main()
