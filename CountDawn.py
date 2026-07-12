@@ -21,10 +21,20 @@ class TimeClass:
 
         print("!!Fin del Tiempo!!")  # mensaje cuando se salga del Bucle
 
-    def usuario(self):
-        print("hola")
-        self.cronometro_atras(self.PedirNumero())
 
+def main():
+    tt = TimeClass()
+    while True:
+        print("1.Iniciar")
+        print("2.Salir")
+        elige = input("Elige: ")
 
-tt = TimeClass()
-tt.cronometro_atras(tt.PedirNumero())
+        if elige == "2":
+            print("Saliendo...")
+            break
+
+        elif elige == "1":
+            tt.cronometro_atras(tt.PedirNumero())
+
+        else:
+            print("Ingrese un valor valido")
