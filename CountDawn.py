@@ -21,8 +21,8 @@ class TimeClass:
 
     def cronometro_atras(self, segundos):  # Bucle principal del codigo
         while segundos >= 0:  # se le dice que se repita hasta que llegue a 0
-            min, seg = divmod(segundos, 60)  # divide segundos a min:seg
-            hor = segundos // 3600
+            hor, segrestante = divmod(segundos, 3600)  # se hallan las horas
+            min, seg = divmod(segrestante, 60)  # se hallan los seg y min
             formanto = f"{hor:02d} : {min:02d} : {seg:02d}"  # Formato en q se vera
             print(f"Tiempo restante: {formanto}", end="\r", flush=True)
             time.sleep(1)  # Espera 1 seg
