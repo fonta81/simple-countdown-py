@@ -31,7 +31,7 @@ class TimeClass:
         print("!!Fin del Tiempo!!")  # mensaje cuando se salga del Bucle
 
     def Usuario(self):
-        print("\n\n")
+        print("\n\n" + "=" * 60)
         print("desea ingrsar la cantidad en")
         print("1.horas")
         print("2.Minutos")
