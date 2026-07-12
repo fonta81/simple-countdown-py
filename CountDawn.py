@@ -4,12 +4,20 @@ import time
 class TimeClass:
     def PedirNumero(self):  # pedir valores en str y pasarlo a int
         try:
-            valor = int(input("Ingrese los minutos en seguntos: "))
+            valor = int(input("Ingrese la cantidad de tiempo: "))
             return valor
         except ValueError:  # en caso de Error:
             print("Ingresa un numero")
         except Exception as e:
             print(f"Error: {e}")
+
+    def Horas(self, horas):  # se le pide la cantidad en hora
+        segundos = horas * 3600  # se pasa a segundos
+        return segundos  # devuelve la cantidad en segundos
+
+    def Minutos(self, Minutos):  # pide la cantidad en Minutos
+        segundos = Minutos * 60  # lo pasa a segundos
+        return segundos  # devuelve la cantidad en segundos
 
     def cronometro_atras(self, segundos):  # Bucle principal del codigo
         while segundos >= 0:  # se le dice que se repita hasta que llegue a 0
@@ -21,6 +29,22 @@ class TimeClass:
             segundos -= 1  # Se lo resta a la cantidad total de segundos
 
         print("!!Fin del Tiempo!!")  # mensaje cuando se salga del Bucle
+
+    def Usuario(self):
+        print("\n\n")
+        print("desea ingrsar la cantidad en")
+        print("1.horas")
+        print("2.Minutos")
+        print("3.segundos")
+        el = input("Elige: ")
+        if el == "1":  # horas -> Funcion Horas
+            self.cronometro_atras(self.Horas(self.PedirNumero()))
+        elif el == "2":  # Minutos -> Funcion Minutos
+            self.cronometro_atras(self.Minutos(self.PedirNumero()))
+        elif el == "3":  # segundos -> Funcion cronometro_atras
+            self.cronometro_atras(self.PedirNumero())
+        else:
+            print("Ingrese un valor valido")
 
 
 def main():
@@ -36,7 +60,7 @@ def main():
             break
 
         elif elige == "1":
-            tt.cronometro_atras(tt.PedirNumero())
+            tt.Usuario()
 
         else:
             print("Ingrese un valor valido")
